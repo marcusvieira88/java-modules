@@ -1,10 +1,14 @@
 package tech.marcusvieira.student.client;
 
-import tech.marcusvieira.student.service.Service;
+import java.util.ServiceLoader;
 
 public class Client {
     public static void main(String[] args) {
-        String result = Service.concatFullName("Marcus", "Vieira");
-        System.out.println(result);
+
+        ServiceLoader<Service> service = ServiceLoader.load(Service.class);
+        for (Service s: service) {
+            String result = s.concatFullName("Avgustina", "Shevchuk");
+            System.out.println(result);
+        }
     }
 }

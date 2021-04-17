@@ -5,7 +5,7 @@ Project used to study java modules
 ### Command to compile:
 ```
 cd java-modules
-avac -d outDir --module-source-path student-modules $(find student-modules -name "*.java")
+javac -d outDir --module-source-path student-modules $(find student-modules -name "*.java")
 ```
 ### Command to run:
 ```
@@ -82,7 +82,8 @@ module my.module {
 A module can also be a service provider that other modules can consume.
 The first part of the directive is the provides keyword. Here is where we put the interface or abstract class name.
 
-Next, we have the with directive where we provide the implementation class name that either implements the interface or extends the abstract class.
+Next, we have the with directive where we provide the implementation class name that
+ either implements the interface or extends the abstract class.
 
 Here's what it looks like put together:
 ```

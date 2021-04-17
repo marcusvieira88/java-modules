@@ -1,3 +1,4 @@
 module service.module {
-    exports tech.marcusvieira.student.service;
+    requires client.module;
+    provides tech.marcusvieira.student.client.Service with tech.marcusvieira.student.service.ServiceImpl;
 }
